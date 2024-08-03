@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react"
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [color, setColor] = useState("olive");
+  
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+    <div className="w-full h-screen duration-200" style={{backgroundColor: color}}>
+
+      {/* note: you could also pass colors as "black" or "#000" */}
+
+
+
+      <div className="fixed bottom-[48px] inset-x-0 flex flex-wrap justify-center px-2">
+
+        <div className="flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-lg">
+
+        <button onClick={()=> setColor('red') } className="outlilne-none px-4 py-2 rounded-full" style={{backgroundColor: "red"}}>Red</button>
+
+        <button onClick={()=> setColor('blue') } className="outlilne-none px-4 py-2 rounded-full" style={{backgroundColor: "blue"}}>Blue</button>
+
+
+        <button onClick={()=> setColor('olive') }className="outlilne-none px-4 py-2 rounded-full" style={{backgroundColor: "olive"}}>Olive</button>
+
+
+        <button onClick={()=> setColor('black') }className="outlilne-none px-4 py-2 rounded-full text-white" style={{backgroundColor: "black"}}>Black</button>
+
+        <button onClick={()=> setColor('white') } className="outlilne-none px-4 py-2 rounded-full border border-black" style={{background: "white"}}>White</button>
+
+          
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+    </div>
     </>
   )
 }
 
 export default App
+
+
+// note: onClick function needs a function as parameter and not the reference of function, therefore we use
+// onClick = {() => setColor("xyx")} and we did not use something like: onClick = {setColor("xyz")}
+
