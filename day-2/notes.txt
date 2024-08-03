@@ -1,0 +1,12 @@
+Read more about React Fiber and Reconciliation: 
+
+Articles link: 
+
+
+https://github.com/acdlite/react-fiber-architecture
+
+
+https://www.geeksforgeeks.org/what-is-react-fiber/
+
+
+

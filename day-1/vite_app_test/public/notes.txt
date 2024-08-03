@@ -1,0 +1,1 @@
+In vite, you need to have .jsx extension for every file and also you need to have components name's (or functions') initial in uppercase

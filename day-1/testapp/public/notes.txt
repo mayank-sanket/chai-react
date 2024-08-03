@@ -1,0 +1,4 @@
+In create-react-app also, you need to have component's (function's) name's initials in uppercase but you can have .js extension as well as .jsx extension unlike vite, where .jsx is mandatory
+
+
+Good practice: also have the filename  of the component with uppercase initial letter, it's not mandatory but a good practice 
